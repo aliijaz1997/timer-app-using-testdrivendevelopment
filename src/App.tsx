@@ -21,10 +21,10 @@ function App() {
         setStatustimer(!statustimer)
    }
    const topausethetimer = () => {
-     setStatustimer(true);
+     setStatustimer(false);
    }
    const stopTimer = () => {
-    setStatustimer(true); 
+    setStatustimer(false); 
     setHours(0);
      setMinutes(0);
      setSeconds(0);
@@ -32,7 +32,7 @@ function App() {
    }
   useEffect(() => {
     let timer: any;
-    if (!statustimer) {
+    if (statustimer) {
       timer = setInterval(() => {
         if (minutes === 59) {
            setMinutes(0);
@@ -56,7 +56,7 @@ function App() {
 
   return (
     <div className="App">
-      {hours}:{minutes}:{seconds}:{milliseconds}
+      {("0" + hours).slice(-2)}:{("0" + minutes).slice(-2)}:{("0" + seconds).slice(-2)}:{("0" + milliseconds).slice(-2)}
       <button onClick = {fucntiontototellstatustobutton}>
         Start
       </button>

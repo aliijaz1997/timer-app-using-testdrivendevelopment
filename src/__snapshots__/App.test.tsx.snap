@@ -4,6 +4,27 @@ exports[`renders the component 1`] = `
 <div
   className="App"
 >
-  Hello World
+  00
+  :
+  00
+  :
+  00
+  :
+  00
+  <button
+    onClick={[Function]}
+  >
+    Start
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Pause
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Stop
+  </button>
 </div>
 `;
