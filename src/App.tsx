@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import firebase from './CloudService/firebase'
 function App() {
-
+const messagingfunctionality = firebase.messaging();
+messagingfunctionality.requestPermission().then(() => {
+  return messagingfunctionality.getToken()
+}).then ((token: string) => {
+  prompt ("The token is " , token )
+})
   // Making use of usestate to update the time
   // let currentTime: { milliseconds: number; seconds: number; minute: number; hours: number; } = {
   //   milliseconds: 0,
