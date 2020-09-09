@@ -56,7 +56,9 @@ function App() {
 
   return (
     <div className="App">
-      {("0" + hours).slice(-2)}:{("0" + minutes).slice(-2)}:{("0" + seconds).slice(-2)}:{("0" + milliseconds).slice(-2)}
+     <div className = "timer"> 
+       {("0" + hours).slice(-2)}:{("0" + minutes).slice(-2)}:{("0" + seconds).slice(-2)}:{("0" + milliseconds).slice(-2)}
+       </div>
       <button onClick = {fucntiontototellstatustobutton}>
         Start
       </button>

@@ -13,7 +13,7 @@ describe("App", () => {
   it ("It should have buttons", () => {
     expect(component.find("button").length).toEqual(3)
   })
-  it ("It should have buttons", () => {
-    expect(component.find("fucntiontototellstatustobutton").length).toEqual(true)
-  })
+  // it ("It should have buttons", () => {
+  //   expect(component.find("start").length).toBeGreaterThanOrEqual(1);
+  // })
 })
