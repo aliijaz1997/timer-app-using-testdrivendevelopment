@@ -1,11 +1,27 @@
-.App {
-  display: flex;
-  /* margin-top: 100px; */
- padding: 150px 290px 0px; 
+.Heading {
+  text-align: center;
 }
 .timer {
- font-size: 200%;
-  margin-top: -65px;
-  margin-right: -105px;
-  margin-left: 0%;
+  font-size: 400%;
+  text-align: center;
+  margin-top: 4rem;
+}
+body {
+  background: url("https://www.homebase.co.uk/-/media/uk%20images/homebase/category-images/paint%20and%20decorating/wallpaper/2020/colours/paintable%20wallapaper%20-grey.jpg?h=800&thn=0&w=800") no-repeat center center fixed;
+  background-size: cover; 
+}
+
+.button {
+  /* margin-left: 0px; */
+  background-color: #333333;
+  width: 210px;
+  height: 80px;  
+  border-radius: 10px;
+  color: #CCCCCC;
+  font-size: 45px;
+  text-align: center;
+}
+.button-div {
+    margin-top: 6rem;
+    text-align: center;
 }

@@ -17,26 +17,29 @@ function App() {
   const [hours, setHours] = useState(0)
   const [statustimer, setStatustimer] = useState<boolean>(false)
   // usinguseEffect to render the setinterval on every change
-   const fucntiontototellstatustobutton = () => {
-        setStatustimer(!statustimer)
-   }
-   const topausethetimer = () => {
-     setStatustimer(false);
-   }
-   const stopTimer = () => {
-    setStatustimer(false); 
+  const fucntiontototellstatustobutton = () => {
+    setStatustimer(!statustimer)
+  }
+  const topausethetimer = () => {
+    setStatustimer(false);
+  }
+  const stopTimer = () => {
+    setStatustimer(false);
     setHours(0);
-     setMinutes(0);
-     setSeconds(0);
-     setMilliseconds(0);
-   }
+    setMinutes(0);
+    setSeconds(0);
+    setMilliseconds(0);
+  }
   useEffect(() => {
     let timer: any;
     if (statustimer) {
       timer = setInterval(() => {
-        if (minutes === 59) {
-           setMinutes(0);
-           setHours (hours + 1);
+       if (hours === 24){
+        stopTimer();
+       }
+        else if (minutes === 59) {
+          setMinutes(0);
+          setHours(hours + 1);
         }
         else if (seconds === 59) {
           setSeconds(0);
@@ -49,25 +52,28 @@ function App() {
           setMilliseconds(milliseconds + 1)
         }
         return clearInterval(timer);
-      },10)
+      }, 10)
     }
   }, [hours, milliseconds, statustimer, seconds, minutes]);
   console.log(seconds);
 
   return (
     <div className="App">
-     <div className = "timer"> 
-       {("0" + hours).slice(-2)}:{("0" + minutes).slice(-2)}:{("0" + seconds).slice(-2)}:{("0" + milliseconds).slice(-2)}
-       </div>
-      <button onClick = {fucntiontototellstatustobutton}>
-        Start
+      <h1 className = "Heading">Timer</h1>
+      <div className="timer">
+        {("0" + hours).slice(-2)}:{("0" + minutes).slice(-2)}:{("0" + seconds).slice(-2)}:{("0" + milliseconds).slice(-2)}
+      </div>
+      <div className = "button-div">
+        <button className="button" onClick={fucntiontototellstatustobutton}>
+          Start
       </button>
-      <button onClick = {topausethetimer}>
-        Pause
+        <button className="button" onClick={topausethetimer}>
+          Pause
       </button>
-      <button onClick = {stopTimer}>
-        Stop
+        <button className="button" onClick={stopTimer}>
+          Stop
       </button>
+      </div>
     </div>
   );
 }
