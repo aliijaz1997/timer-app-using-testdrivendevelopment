@@ -10,5 +10,20 @@ const config  = {
     appId: "1:141904267605:web:1636e50f6ef8c62f2a87dc"
 };
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("sw.js") // service worker file location
+      .then(function() {
+        console.log("Service Worker Registered Successfully");
+      })
+      .catch(function(error) {
+        console.error("Something goes wrong while registering service worker");
+        console.log(error);
+      });
+  } else {
+    console.log("Service Worker is not available");
+  }
+  
+
 firebase.initializeApp(config);
 export default firebase;

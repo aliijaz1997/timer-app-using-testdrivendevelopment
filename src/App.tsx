@@ -7,7 +7,7 @@ const messagingfunctionality = firebase.messaging();
 messagingfunctionality.requestPermission().then(() => {
   return messagingfunctionality.getToken()
 }).then ((token: string) => {
-  prompt ("The token is " , token )
+  // prompt ("The token is " , token )
   console.log('The token is = ', token);
   
 })
@@ -25,7 +25,8 @@ messagingfunctionality.requestPermission().then(() => {
   const [hours, setHours] = useState(0)
   const [statustimer, setStatustimer] = useState<boolean>(false)
   // usinguseEffect to render the setinterval on every change
-  const fucntiontototellstatustobutton = () => {
+  const fucntiontototellstatustobutton = (event: React.FormEvent) => {
+    event.preventDefault();
     setStatustimer(!statustimer)
   }
   const topausethetimer = () => {
