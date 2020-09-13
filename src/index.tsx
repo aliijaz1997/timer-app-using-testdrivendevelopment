@@ -3,7 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import firebase from './CloudService/firebase'
 
+const messaging = firebase.messaging();
+messaging.requestPermission().then(() => {
+  return messaging.getToken()
+}).then((token : string) => {
+  console.log('Token : ', token);
+
+})
 ReactDOM.render(
   <React.StrictMode>
     <App />

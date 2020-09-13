@@ -10,13 +10,11 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.8",
-    "firebase": "^7.19.1",
+    "firebase": "^7.20.0",
     "firebase-tools": "^8.10.0",
-    "gem": "^2.4.3",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "travis": "^0.1.1",
-    "travis-ci": "^2.2.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -51,7 +49,6 @@
     "enzyme-adapter-react-16": "1.15.4",
     "enzyme-to-json": "3.5.0",
     "jest-fetch-mock": "3.0.3",
-    "react-dom": "^16.13.1",
     "ts-jest": "26.3.0"
   },
   "jest": {
